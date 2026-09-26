@@ -1,4 +1,4 @@
-name: Run HelloWorld Script
+name: Run All JavaScript Scripts
 
 on:
   push:
@@ -21,4 +21,10 @@ jobs:
         run: |
           echo "Starting HelloWorld.js..."
           node Chapter_01_JS_basics/01_HelloWorld.js
+          echo "Script finished!"
+
+       - name: Run NewTest script
+        run: |
+          echo "Starting NewTest.js..."
+          node Chapter_01_JS_basics/03_newtest.js
           echo "Script finished!"
