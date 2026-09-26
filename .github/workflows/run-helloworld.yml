@@ -1,4 +1,4 @@
-name: Run All JavaScript Scripts
+name: Run Selected JavaScript Scripts
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
           node Chapter_01_JS_basics/01_HelloWorld.js
           echo "Script finished!"
 
-       - name: Run NewTest script
+      - name: Run NewTest script
         run: |
           echo "Starting NewTest.js..."
           node Chapter_01_JS_basics/03_newtest.js
