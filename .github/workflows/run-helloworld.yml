@@ -1,0 +1,21 @@
+name: Run HelloWorld Script
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  run-js:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Run HelloWorld script
+        run: node Chapter_01_JS_basics/01_HelloWorld.js
